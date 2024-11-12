@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Register from "./pages/Register";
+import Register from "./pages/Register.jsx";
+import RegistrationForm from './Components/RegistrationForm'
 
 function App() {
   return (
