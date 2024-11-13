@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
+import './Form.css';
 
 const SignupSchema = Yup.object().shape({
     firstName: Yup.string()
@@ -27,36 +28,36 @@ const RegistrationForm = () => (
     <div className='main-form-container'>
 
         <div className='form-container'>
-        <h1>Signup</h1>
-        <Formik
-            initialValues={{
-                firstName: '',
-                lastName: '',
-                address: '',
-                email: '',
-                phone: '',
-                password: '',
-                confirmPassword: '',
-            }}
-            validationSchema={SignupSchema}
-            onSubmit={values => {
-                console.log(values);
-            }}
+            <h1>Signup</h1>
+            <Formik
+                initialValues={{
+                    firstName: '',
+                    lastName: '',
+                    address: '',
+                    email: '',
+                    phone: '',
+                    password: '',
+                    confirmPassword: '',
+                }}
+                validationSchema={SignupSchema}
+                onSubmit={values => {
+                    console.log(values);
+                }}
 
-        >
-            {({ errors, touched }) => (
-                    <Form className='registration-form'>
+            >
+                {({ errors, touched }) => (
+                    <Form className='form-div'>
 
                         <div className='fields-container'>
                             <Field name="firstName" placeholder='First name' className='registration-form-fields' />
-                    {errors.firstName && touched.firstName ? (
+                            {errors.firstName && touched.firstName ? (
                                 <div className='error-div'>{errors.firstName}</div>
-                    ) : null}
+                            ) : null}
                         </div>
 
                         <div className='fields-container'>
                             <Field name="lastName" placeholder="Last name" className='registration-form-fields' />
-                    {errors.lastName && touched.lastName ? (
+                            {errors.lastName && touched.lastName ? (
                                 <div className='error-div'>{errors.lastName}</div>
                             ) : null}
                         </div>
@@ -65,7 +66,7 @@ const RegistrationForm = () => (
                             <Field name="address" placeholder="Address" className='registration-form-fields' />
                             {errors.address && touched.address ? (
                                 <div className='error-div'>{errors.address}</div>
-                            ) : null}  
+                            ) : null}
                         </div>
 
                         <div className='fields-container'>
@@ -79,22 +80,24 @@ const RegistrationForm = () => (
                         </div>
 
                         <div className='fields-container'>
-                            <Field name="password" placeholder="Password" className='registration-form-fields' />
+                            <Field name="password" type='password' placeholder="Password" className='registration-form-fields' />
                             {errors.password && touched.password ? <div className='error-div'>{errors.password}</div> : null}
                         </div>
 
                         <div className='fields-container'>
-                            <Field name="confirmPassword" placeholder="Confirm Password" className='registration-form-fields' />
+                            <Field name="confirmPassword" type='password'
+                                placeholder="Confirm Password" className='registration-form-fields'
+                            />
                             {errors.confirmPassword && touched.confirmPassword ? <div className='error-div'>{errors.confirmPassword}</div> : null}
 
                         </div>
 
                         <button className='submit-btn' type="submit">Submit</button>
 
-                </Form>
-            )}
-        </Formik>
-    </div>
+                    </Form>
+                )}
+            </Formik>
+        </div>
     </div>
 
 );

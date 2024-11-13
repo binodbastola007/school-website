@@ -1,0 +1,64 @@
+.main-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: cyan;
+    width: 25%;
+    height: 570px;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.fields-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+}
+
+.registration-form-fields {
+    padding: .5rem;
+    width: 70%;
+}
+
+.submit-btn {
+    padding: .5rem;
+    background-color: cadetblue;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: none;
+    width: 76%;
+    height: 35px;
+    margin-top: .3rem;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.error-div {
+    color: red;
+    font-size: .7rem;
+    align-self: flex-start;
+    margin-left: 3rem;
+}
