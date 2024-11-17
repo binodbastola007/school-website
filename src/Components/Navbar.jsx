@@ -29,12 +29,9 @@ const menuItems = [
                 key: '1',
             },
             {
-                type: 'divider',
-            },
-            {
-                label: '3rd menu item（disabled）',
+                label: '3rd menu item',
                 key: '3',
-                disabled: true,
+                disabled: false,
             },
         ]
     },
@@ -47,7 +44,7 @@ const Navbar = () => {
         <div className='nav-container'>
             <div className='items-container'>
                 <div className='logo-div'>
-                    <img src='/logo192.png' className='logo-img' />
+                    <img src='/schoollogo.png' className='logo-img' />
                 </div>
                 {menuItems.map((items) => {
                     return (<>
