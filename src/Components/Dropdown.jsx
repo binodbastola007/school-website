@@ -1,14 +1,22 @@
 import React from 'react';
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
-const NavItem = ({ title, items }) => (
+const NavItem = ({ title, items }) => {
+
+    const handleNavItemClick = () => {
+        alert('popup')
+    }
+
+
+    return (
     <Dropdown
         menu={{
             items,
         }}
     >
-        <a onClick={(e) => e.preventDefault()}>
+            <a onClick={handleNavItemClick}>
             <Space>
                 {title}
                 {items?.length > 0 && <DownOutlined />}
@@ -16,4 +24,5 @@ const NavItem = ({ title, items }) => (
         </a>
     </Dropdown>
 );
+}
 export default NavItem;
