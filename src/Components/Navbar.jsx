@@ -2,6 +2,7 @@ import React from 'react'
 import NavItem from './Dropdown'
 import './Components.css'
 import ProfileIcon from './ProfileIcon'
+import { useNavigate } from 'react-router-dom'
 
 const menuItems = [
     { title: 'Home', value: [] },
@@ -40,6 +41,8 @@ const menuItems = [
 ]
 
 const Navbar = () => {
+
+
     return (
         <div className='nav-container'>
             <div className='items-container'>
