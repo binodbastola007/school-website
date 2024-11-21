@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Homepage from "./pages/Homepage";
 import Aboutus from "./pages/Aboutus";
 import { useNavigate } from "react-router-dom";
+import Example from "./pages/Example";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/example" element={<Example />} />
         </Routes>
       </BrowserRouter>
     </>
