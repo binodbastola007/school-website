@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Example = () => {
+
+    useEffect(() => {
+
+        setInterval(() => {
+            alert('I am a alert box')
+        }, [3000])
+
+    }, [])
+
     return (
         <div style={{
             display: 'flex', flexDirection: 'row', border: '2px solid black', padding: "25px",

@@ -42,9 +42,10 @@ code {
 }
 
 .posts {
-  width: 800px;
+  width: 80vw;
 }
 
 .posts-sidediv {
   margin-top: 1rem;
+  width: 25vw;
 }

@@ -8,7 +8,7 @@ const NavItem = ({ title, items }) => {
     const navigate = useNavigate();
 
     const handleNavItemClick = (title) => {
-        console.log(title)
+
         if (title == 'Home') {
             navigate('/');
         }

@@ -9,7 +9,6 @@ import Example from "./pages/Example";
 
 function App() {
 
-  // const navigate = useNavigate();
 
   return (
     <>
