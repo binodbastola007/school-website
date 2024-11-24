@@ -3,7 +3,7 @@ import { Button, Flex } from 'antd';
 
 const ReadmoreButton = () => (
     <Flex gap="small" wrap>
-        <Button type="primary">Primary Button</Button>
+        <Button type="primary">Read more</Button>
     </Flex>
 );
 

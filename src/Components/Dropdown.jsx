@@ -1,13 +1,22 @@
 import React from 'react';
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
+import { useNavigate } from 'react-router-dom'
 
 const NavItem = ({ title, items }) => {
 
+    const navigate = useNavigate();
 
-
-    const handleNavItemClick = () => {
-        alert('popup')
+    const handleNavItemClick = (title) => {
+        console.log(title)
+        if (title == 'Home') {
+            navigate('/');
+        }
+        else if (title == 'About us') {
+            navigate('/aboutus')
+        } else {
+            return;
+        }
     }
 
 
@@ -17,8 +26,8 @@ const NavItem = ({ title, items }) => {
             items,
         }}
     >
-            <a onClick={handleNavItemClick}>
-            <Space>
+            <a onClick={() => handleNavItemClick(title)}>
+                <Space className='title'>
                 {title}
                 {items?.length > 0 && <DownOutlined />}
             </Space>

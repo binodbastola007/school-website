@@ -23,7 +23,28 @@ code {
 }
 
 .post-img {
-  width: 600px;
+  width: 800px;
   height: 250px;
   object-fit: cover;
+}
+.title-post {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0rem;
+}
+
+.posts-container {
+  margin: 2rem 0rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.posts {
+  width: 800px;
+}
+
+.posts-sidediv {
+  margin-top: 1rem;
 }
