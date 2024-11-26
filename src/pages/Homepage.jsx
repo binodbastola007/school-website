@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
-import ReadmoreButton from '../Components/ReadmoreButton'
+import React, { useEffect } from 'react';
+import ReadmoreButton from '../Components/ReadmoreButton';
+import CarouselHome from '../Components/CarousalHome';
 
 const Homepage = () => {
 
@@ -8,7 +9,15 @@ const Homepage = () => {
         <>
             <div>
                 <img src='/school1.jpg' alt='preview' className='carousal-img' />
+                {/* <CarouselHome /> */}
             </div>
+
+            <div className='school-analytics'>
+                <span className='info'>23+ proffesional teachers</span>
+                <span className='info'>Updated Courses</span>
+                <span className='info'>300+ registered students</span>
+            </div>
+
             <div className='posts-container'>
                 <div className='posts'>
                     <span className='title-post'>
@@ -127,6 +136,20 @@ const Homepage = () => {
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+
+
+            <div>
+                <div className='footer-logo'>
+                    logo
+                </div>
+                <div>
+                    Contact us
+                </div>
+                <div>
+                    Quick links
                 </div>
             </div>
 

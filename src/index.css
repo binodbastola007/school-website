@@ -68,3 +68,18 @@ code {
     font-size: 2rem;
       display: block;
 }
+.school-analytics {
+  background-color: lightblue;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 110px;
+}
+
+.info {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
