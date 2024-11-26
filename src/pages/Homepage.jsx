@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import ReadmoreButton from '../Components/ReadmoreButton';
 import CarouselHome from '../Components/CarousalHome';
+import CountUp from 'react-countup';
 
 const Homepage = () => {
 
@@ -8,14 +9,20 @@ const Homepage = () => {
     return (
         <>
             <div>
-                <img src='/school1.jpg' alt='preview' className='carousal-img' />
-                {/* <CarouselHome /> */}
+                {/* <img src='/school1.jpg' alt='preview' className='carousal-img' /> */}
+                <CarouselHome />
             </div>
 
             <div className='school-analytics'>
-                <span className='info'>23+ proffesional teachers</span>
-                <span className='info'>Updated Courses</span>
-                <span className='info'>300+ registered students</span>
+                <span className='info'>
+                    <CountUp start={0} end={23} duration={3} />+ proffesional teachers
+                </span>
+                <span className='info'>
+                    Updated Courses
+                </span>
+                <span className='info'>
+                    <CountUp start={0} end={500} duration={3} />+ registered student
+                </span>
             </div>
 
             <div className='posts-container'>
@@ -139,7 +146,25 @@ const Homepage = () => {
                 </div>
             </div>
 
+            <div className='vision-mission-div'>
+                <div>
+                    <h2>Our vision</h2>
+                    <p>
+                        dfasfdsaf fdsa fasdf fdsaf fdsafasfd asfdasdfsdfasd
+                        sdfasdf as dfsaasdfsad  fsdfasdf  fasdafsaf asfdasdf asfdasdf
+                        dfdasfdsa fasdfsadf afdsasdf asfsad fasdf asdfasf  sda fasdf
+                    </p>
+                </div>
+                <div>
+                    <h2>Our mission</h2>
+                    <p>
+                        dfasfdsaf fdsa fasdf fdsaf fdsafasfd asfdasdfsdfasd
+                        sdfasdf as dfsaasdfsad  fsdfasdf  fasdafsaf asfdasdf asfdasdf
+                        dfdasfdsa fasdfsadf afdsasdf asfsad fasdf asdfasf  sda fasdf
+                    </p>
+                </div>
 
+            </div>
 
             <div>
                 <div className='footer-logo'>

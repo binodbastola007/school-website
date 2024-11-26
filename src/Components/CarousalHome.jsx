@@ -8,19 +8,19 @@ const contentStyle = {
 
 const CarouselHome = () => (
     <>
-        <Carousel arrows infinite={false}>
+        <Carousel arrows infinite={true} autoplay={true} autoplaySpeed={2000}>
             <div style={{ width: '100%' }}>
-                <img src='/school1.jpg' style={{ contentStyle }} />
+                <img src='/school1.jpg' alt='preview' className='carousal-img' />
             </div>
             <div style={{ width: '100%' }}>
-                <img src='/post1.jpg' style={{ contentStyle }} />
+                <img src='/post1.jpg' className='carousal-img' />
             </div>
             <div style={{ width: '100%' }}>
-                <img src='/post2.jpg' style={{ contentStyle }} />
+                <img src='/post4.jpg' className='carousal-img' />
             </div>
 
         </Carousel>
-        {/* <br /> */}
+
     </>
 );
 export default CarouselHome;
