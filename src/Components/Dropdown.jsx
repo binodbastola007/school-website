@@ -14,7 +14,21 @@ const NavItem = ({ title, items }) => {
         }
         else if (title == 'About us') {
             navigate('/aboutus')
-        } else {
+        }
+        else if (title == 'Contact us') {
+            navigate('/contact-us')
+        }
+        else if (title == 'Notices') {
+            navigate('/notices')
+        }
+        else if (title == 'Gallery') {
+            navigate('/gallery')
+        }
+        else if (title == 'Apply now') {
+            navigate('/applynow')
+        }
+
+        else {
             return;
         }
     }

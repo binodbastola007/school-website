@@ -8,7 +8,7 @@ const menuItems = [
     { title: 'Home', value: [] },
     { title: 'About us', value: [] },
     { title: 'Contact us', value: [] },
-    { title: 'Events', value: [] },
+    { title: 'Gallery', value: [] },
     { title: 'Notices', value: [] },
     {
         title: "Teacher's guide",

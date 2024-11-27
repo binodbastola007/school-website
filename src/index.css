@@ -12,9 +12,15 @@ code {
     monospace;
 }
 
+* {
+  box-sizing: border-box;
+}
 .main-container {
   height: 80vh;
   overflow-y: scroll;
+}
+.homepage-container {
+  width: 100vw;
 }
 .carousal-img {
   width: 100%;
@@ -35,17 +41,14 @@ code {
 }
 
 .posts-container {
-  margin: 2rem 0rem;
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
   width: 100vw;
+    padding: 1rem 2rem;
 }
 
 .posts {
-  width: 65vw;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  width: 50%;
   }
   
   .message-div-principal {
@@ -57,10 +60,9 @@ code {
 
 .posts-sidediv {
   margin-top: 4rem;
-    width: 35vw;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    width: 30%;
     background-color: rgb(222, 154, 70);
+    padding: 1rem;
   }
   
   .why-us-text {
@@ -82,4 +84,36 @@ code {
   display: block;
   font-size: 2rem;
   font-weight: bold;
+}
+.quick-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem 2rem;
+  background-color: lightblue;
+}
+
+.animated-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  animation: zoomFade 3s infinite;
+}
+
+@keyframes zoomFade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

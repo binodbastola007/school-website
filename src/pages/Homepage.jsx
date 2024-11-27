@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import ReadmoreButton from '../Components/ReadmoreButton';
 import CarouselHome from '../Components/CarousalHome';
 import CountUp from 'react-countup';
+import { PhoneOutlined } from '@ant-design/icons';
 
 const Homepage = () => {
 
 
     return (
-        <>
+        <div className='homepage-container'>
             <div>
-                {/* <img src='/school1.jpg' alt='preview' className='carousal-img' /> */}
                 <CarouselHome />
             </div>
 
@@ -148,37 +148,40 @@ const Homepage = () => {
 
             <div className='vision-mission-div'>
                 <div>
-                    <h2>Our vision</h2>
-                    <p>
-                        dfasfdsaf fdsa fasdf fdsaf fdsafasfd asfdasdfsdfasd
-                        sdfasdf as dfsaasdfsad  fsdfasdf  fasdafsaf asfdasdf asfdasdf
-                        dfdasfdsa fasdfsadf afdsasdf asfsad fasdf asdfasf  sda fasdf
-                    </p>
+                    <h3>Our vision</h3>
+                    <img src='/vision.jpg' className='animated-image' />
+                    <p>lorem epsum</p>
                 </div>
                 <div>
-                    <h2>Our mission</h2>
-                    <p>
-                        dfasfdsaf fdsa fasdf fdsaf fdsafasfd asfdasdfsdfasd
-                        sdfasdf as dfsaasdfsad  fsdfasdf  fasdafsaf asfdasdf asfdasdf
-                        dfdasfdsa fasdfsadf afdsasdf asfsad fasdf asdfasf  sda fasdf
-                    </p>
+                    <h3>Our mission</h3>
+                    <img src='/mission.jpg' className='animated-image' />
+                    <p>lorem epsum</p>
                 </div>
-
             </div>
 
-            <div>
+            <div className='quick-links'>
                 <div className='footer-logo'>
                     logo
                 </div>
-                <div>
-                    Contact us
+                <div className='footer-contactus'>
+                    <div>Contact us</div>
+                    <ul>
+                        <li>shangrilainternation@gmail.com</li>
+                        <li><PhoneOutlined />+977-9812345678 / 01-657847</li>
+                        <li>Chapagaun,Lalitpur</li>
+                    </ul>
                 </div>
-                <div>
-                    Quick links
+                <div className='footer-quicklinks'>
+                    <div>Quick links</div>
+                    <ul>
+                        <li>Facebook page link</li>
+                        <li>Instagram page link</li>
+                        <li>Tweeter page link</li>
+                    </ul>
                 </div>
             </div>
 
-        </>
+        </div>
     )
 }
 
