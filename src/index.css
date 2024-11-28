@@ -93,12 +93,17 @@ code {
   background-color: lightblue;
 }
 
+.title-vision-mission {
+  text-align: center;
+}
 .animated-image {
   width: 300px;
   height: 200px;
+  padding: 1.5rem;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 2rem;
   animation: zoomFade 3s infinite;
+
 }
 
 @keyframes zoomFade {
@@ -116,4 +121,20 @@ code {
     transform: scale(1);
     opacity: 1;
   }
+}
+.vision-mission-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 2rem 4rem 2rem;
+}
+
+.vision-div {
+  display: flex;
+  /* width: 50%; */
+}
+
+.mission-div {
+  display: flex;
+  /* width: 50%; */
 }

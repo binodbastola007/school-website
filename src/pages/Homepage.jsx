@@ -147,15 +147,40 @@ const Homepage = () => {
             </div>
 
             <div className='vision-mission-div'>
-                <div>
-                    <h3>Our vision</h3>
+                <div >
+                    <h1 className='title-vision-mission'>Our vision</h1>
+                    <div className='vision-div' s>
                     <img src='/vision.jpg' className='animated-image' />
-                    <p>lorem epsum</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit
+                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.s
+                        </p>
+                    </div>
+
+
                 </div>
                 <div>
-                    <h3>Our mission</h3>
+                    <h1 className='title-vision-mission'>Our mission</h1>
+                    <div className='mission-div'>
                     <img src='/mission.jpg' className='animated-image' />
-                    <p>lorem epsum</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit
+                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.s
+                        </p>
+                    </div>
+
                 </div>
             </div>
 

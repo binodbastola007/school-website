@@ -1,0 +1,75 @@
+.aboutus {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: blueviolet;
+    height: 10vh;
+}
+
+.aboutus-title {
+    background-color: blanchedalmond;
+    align-items: flex-start;
+    margin-left: 2rem;
+    width: 200vh;
+
+}
+
+.vision-mission {
+    background-color: blueviolet;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 10vh;
+}
+
+.aboutus-main {
+    width: 200vh;
+    height: 50vh;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: blanchedalmond
+}
+
+.vision-mission-title {
+    margin-left: 2rem;
+    height: 70vh;
+    width: 150vh;
+    align-items: left;
+    justify-content: left;
+    display: flex;
+}
+
+.Namaste {
+    display: flex;
+    float: right;
+    overflow: hidden;
+    height: 30vh;
+    width: 30vh;
+    margin-right: 0rem;
+}
+
+.aboutus-lastpage-main {
+    display: flex;
+    width: 170vh;
+    height: 150vh;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.aboutus-flex1 {
+    height: 50vh;
+    width: 30vh;
+
+}
+
+.aboutus-flex2 {
+    height: 50vh;
+    width: 30vh;
+
+}
+
+.aboutus-flex3 {
+    height: 50vh;
+    width: 30vh;
+
+}
