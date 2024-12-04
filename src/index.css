@@ -18,7 +18,9 @@ code {
 .main-container {
   height: 80vh;
   overflow-y: scroll;
+  
 }
+
 .homepage-container {
   width: 100vw;
 }
@@ -102,7 +104,10 @@ code {
   padding: 1.5rem;
   object-fit: cover;
   border-radius: 2rem;
-  animation: zoomFade 3s infinite;
+  animation: zoomFade;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 
 }
 

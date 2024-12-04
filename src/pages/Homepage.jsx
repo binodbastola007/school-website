@@ -2,9 +2,23 @@ import React, { useEffect } from 'react';
 import ReadmoreButton from '../Components/ReadmoreButton';
 import CarouselHome from '../Components/CarousalHome';
 import CountUp from 'react-countup';
-import { PhoneOutlined } from '@ant-design/icons';
+import { FaPhoneSquareAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { IoLocationSharp } from "react-icons/io5";
 
 const Homepage = () => {
+
+    fetch('http://localhost:5000')
+        .then((response) => {
+            return response.json(); // Assuming the server returns JSON
+        })
+        .then((data) => {
+            console.log("Data fetched successfully:", data);
+        })
+        .catch((error) => {
+            console.error("Failed to fetch:", error);
+        });
+
 
 
     return (
@@ -191,9 +205,9 @@ const Homepage = () => {
                 <div className='footer-contactus'>
                     <div>Contact us</div>
                     <ul>
-                        <li>shangrilainternation@gmail.com</li>
-                        <li><PhoneOutlined />+977-9812345678 / 01-657847</li>
-                        <li>Chapagaun,Lalitpur</li>
+                        <li><MdEmail /> shangrilainternation@gmail.com</li>
+                        <li><FaPhoneSquareAlt />+977-9812345678 / 01-657847</li>
+                        <li> <IoLocationSharp />Chapagaun,Lalitpur</li>
                     </ul>
                 </div>
                 <div className='footer-quicklinks'>

@@ -1,0 +1,80 @@
+.main-applynow {
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    height: 15vh;
+    width: 10vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+.h1-title {
+    color: blueviolet;
+    align-items: left;
+    justify-content: left;
+    display: flex;
+    width: 175vh;
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.applynow {
+    background-color: rgb(6, 99, 6);
+    color: white;
+    height: 3rem;
+    width: 10rem;
+    margin-left: 80vh;
+    text-transform: capitalize;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 500vh;
+    animation: zoomFade 3s infinite;
+}
+
+@keyframes zoomFade {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.page {
+    height: 200vh;
+}
+
+.form {
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;
+    color: white;
+}
+
+.submit-btn {
+    width: 15vh;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
