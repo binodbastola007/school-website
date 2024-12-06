@@ -8,17 +8,35 @@ import { IoLocationSharp } from "react-icons/io5";
 
 const Homepage = () => {
 
-    fetch('http://localhost:5000')
-        .then((response) => {
-            return response.json(); // Assuming the server returns JSON
-        })
-        .then((data) => {
-            console.log("Data fetched successfully:", data);
-        })
-        .catch((error) => {
-            console.error("Failed to fetch:", error);
-        });
 
+    useEffect(() => {
+        // fetch('http://localhost:5000', { method: 'GET' })
+        //     .then((response) => {
+        //         return response.json();
+        //     })
+        //     .then((data) => {
+        //         console.log("Data fetched successfully:", data);
+        //     })
+        //     .catch((error) => {
+        //         console.error("Failed to fetch:", error);
+        //     });
+
+        async function getData() {
+
+            try {
+                const response = await fetch("http://localhost:5000/");
+                console.log(response)
+
+                const json = await response.json();
+                console.log(json);
+            }
+            catch (error) {
+                console.error(error.message);
+            }
+        }
+        getData();
+
+    }, [])
 
 
     return (
