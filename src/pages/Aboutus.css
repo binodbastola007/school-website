@@ -1,21 +1,26 @@
+.about-us-container {
+    width: 100%;
+}
 .aboutus {
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: blueviolet;
+    background-color: #de9a46;
     height: 10vh;
+    width: 100%;
 }
 
 .aboutus-title {
-    background-color: blanchedalmond;
-    align-items: flex-start;
-    margin-left: 2rem;
-    width: 200vh;
+    /* background-color: blanchedalmond; */
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 100%;
+        font-size: 1.3rem;
 
 }
 
 .vision-mission {
-    background-color: blueviolet;
+    background-color: #de9a46;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -23,29 +28,29 @@
 }
 
 .aboutus-main {
-    width: 200vh;
-    height: 50vh;
-    justify-content: space-between;
-    flex-direction: row;
-    background-color: blanchedalmond
+    padding-left: 2rem;
+        padding-right: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
 }
 
-.vision-mission-title {
-    margin-left: 2rem;
-    height: 70vh;
-    width: 150vh;
-    align-items: left;
-    justify-content: left;
-    display: flex;
+.vision-mission-paragraph {
+    height: fit-content;
+    width: 80%;
+    font-size: 1.3rem;
 }
 
 .Namaste {
-    display: flex;
-    float: right;
-    overflow: hidden;
-    height: 30vh;
-    width: 30vh;
-    margin-right: 0rem;
+    width: auto;
+        padding-left: 1rem;
+        padding-top: 1.5rem;
+    }
+    
+    .vision-mission-img {
+        /* width: 20%;
+                                        height: 20%; */
 }
 
 .aboutus-lastpage-main {

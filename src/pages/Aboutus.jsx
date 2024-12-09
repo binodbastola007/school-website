@@ -3,7 +3,7 @@ import './Aboutus.css';
 
 const Aboutus = () => {
     return (
-        <>
+        <div className='about-us-container'>
             <h2 className='aboutus'>ABOUT US</h2>
             <p align='justify' className='aboutus-title'> &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;The basic purpose of narrative is to entertain, to gain and hold readers' interest.
                 However narratives can also be written to teach or inform, to change attitudes / social
@@ -22,11 +22,8 @@ const Aboutus = () => {
             <h2 className='vision-mission'>Our Vision & Mission</h2>
 
             <div className='aboutus-main'>
-                <div className='Namaste'>
-                    <img src='Namaste.jpeg' />
-                </div>
-                <div className='vision-mission-title'>
-                    <p align='justify'>&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; Our school's mission is to learn leadership,
+
+                <p className='vision-mission-paragraph' align='justify'>&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; Our school's mission is to learn leadership,
                         the common core, and relationships for life. Our mission is to provide a safe, disciplined learning
                         environment that empowers all students to develop their full potential. We feel strongly about helping
                         to build leaders that have the ability to succeed in whatever endeavor they undertake. Winning is not
@@ -43,24 +40,30 @@ const Aboutus = () => {
                         Narratives sequence people/characters in time and place but differ from recounts in that
                         through the sequencing, the stories set up one or more problems, which must eventually
                         find a way to be resolved. The common structure or basic plan of narrative text is known
-                        as the "story grammar".<br /> Shree Kali Devi Secondary School </p>
+                    as the "story grammar".<br /> Shree Kali Devi Secondary School
+                </p>
+
+                <div className='Namaste'>
+                    <img src='/post3.jpg' className='vision-mission-img' />
                 </div>
             </div>
+
+
             <div className='aboutus-lastpage-main'>
 
                 <div className='aboutus-flex1'>
-                    <img src='Namaste.jpeg' />
+                    <img src='/post1.jpg' />
                 </div>
                 <div className='aboutus-flex2'>
-                    <img src='Namaste.jpeg' />
+                    <img src='post2.jpg' />
                 </div>
                 <div className='aboutus-flex3'>
-                    <img src='Namaste.jpeg' />
+                    <img src='post3.jpg' />
                 </div>
 
             </div>
 
-        </>
+        </div>
     )
 }
 

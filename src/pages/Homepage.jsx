@@ -10,23 +10,11 @@ const Homepage = () => {
 
 
     useEffect(() => {
-        // fetch('http://localhost:5000', { method: 'GET' })
-        //     .then((response) => {
-        //         return response.json();
-        //     })
-        //     .then((data) => {
-        //         console.log("Data fetched successfully:", data);
-        //     })
-        //     .catch((error) => {
-        //         console.error("Failed to fetch:", error);
-        //     });
 
         async function getData() {
 
             try {
                 const response = await fetch("http://localhost:5000/");
-                console.log(response)
-
                 const json = await response.json();
                 console.log(json);
             }
