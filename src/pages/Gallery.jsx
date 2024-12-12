@@ -56,7 +56,7 @@ const Gallery = () => {
             <h1 className="gallery-title">Photo Gallery</h1>
             {/* Buttons for Categories */}
             <div className="gallery-buttons">
-                {Object.keys(galleryData).map((category) => (
+                {Object.keys(galleryData).map((category, index) => (
                     <button
                         key={category}
                         className={`gallery-button ${selectedCategory === category ? "active" : ""
@@ -71,7 +71,7 @@ const Gallery = () => {
             <div className="gallery-grid">
                 {galleryData[selectedCategory].map((image, index) => (
                     <div key={index} className="gallery-item">
-                        <img src={image} alt={`${image}.${index}`} className="gallery-image" />
+                        <img src='' alt={`${image}.${index}`} className="gallery-image" />
                     </div>
                 ))}
             </div>
@@ -80,4 +80,6 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+
 

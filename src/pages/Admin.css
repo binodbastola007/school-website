@@ -1,0 +1,28 @@
+.admin-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.sidebar {
+    width: 18%;
+    min-height: 100vh;
+    background-color: orange;
+}
+
+.main-page {
+    width: 82%;
+    min-height: 100vh;
+    background-color: violet;
+}
+
+.sidebar-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    /* box-shadow: 0px 0px 4px 1px lightblue; */
+    border-bottom: 1px solid black;
+    cursor: pointer;
+
+}

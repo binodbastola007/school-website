@@ -49,20 +49,6 @@ const Aboutus = () => {
             </div>
 
 
-            <div className='aboutus-lastpage-main'>
-
-                <div className='aboutus-flex1'>
-                    <img src='/post1.jpg' />
-                </div>
-                <div className='aboutus-flex2'>
-                    <img src='post2.jpg' />
-                </div>
-                <div className='aboutus-flex3'>
-                    <img src='post3.jpg' />
-                </div>
-
-            </div>
-
         </div>
     )
 }

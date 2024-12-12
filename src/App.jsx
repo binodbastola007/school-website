@@ -10,7 +10,8 @@ import Applynow from "./pages/Applynow";
 import Contactus from "./pages/Contactus";
 import Gallery from "./pages/Gallery";
 import Notices from "./pages/Notices";
-import Table from "./pages/Table";
+import Admin from "./pages/Admin";
+
 
 function App() {
 
@@ -27,7 +28,9 @@ function App() {
         <Route path="/contact-us" element={<Contactus />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/notices" element={<Notices />} />
-        {/* <Route path="/table" element={<Table />} /> */}
+        <Route path="/admin/login" element={<Login />} />
+        <Route path="/admin/panel" element={<Admin />} />
+
 
       </Routes>
     </>
