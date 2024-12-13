@@ -8,6 +8,7 @@
     width: 18%;
     min-height: 100vh;
     background-color: orange;
+    
 }
 
 .main-page {
@@ -25,4 +26,7 @@
     border-bottom: 1px solid black;
     cursor: pointer;
 
+}
+.sidebar-items-top {
+    margin-top: 1rem;
 }

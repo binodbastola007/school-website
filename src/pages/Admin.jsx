@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Admin.css';
+import Dashboard from './Admin-panel/Dashboard';
 
 const Admin = () => {
 
@@ -8,7 +9,7 @@ const Admin = () => {
     return (
         <div className='admin-container'>
             <div className='sidebar'>
-                <div className='sidebar-items'>
+                <div className='sidebar-items sidebar-items-top' onClick={() => setPage('dashboard')}>
                     <span>Dashboard</span>
                 </div>
                 <div className='sidebar-items' onClick={() => setPage('post-upload')}>
@@ -20,30 +21,39 @@ const Admin = () => {
                 <div className='sidebar-items' onClick={() => setPage('approve-registration-forms')}>
                     <span> Approve Registration forms</span>
                 </div>
-                <div className='sidebar-items' onClick={() => setPage('change-password')}>
+                <div className='sidebar-items ' onClick={() => setPage('change-password')}>
                     <span>Change password</span>
                 </div>
             </div>
             <div className='main-page'>
                 {
-                    page === 'dashboard' &&
-                    <div className='admin-dashboard'>
-                        Dashboard
-                    </div>
+                    page == 'dashboard' &&
+                    <Dashboard />
                 }
-
-                <div className='post-upload'>
+                {page == 'post-upload' &&
+                    <div className='post-upload'>
                     Post upload
                 </div>
-                <div className='post-upload'>
+                }
+                {
+                    page == 'notices-upload' &&
+                    <div className='notices-upload'>
                     Notices upload
                 </div>
-                <div className='post-upload'>
+                }
+                {
+                    page == 'approve-registration-forms' &&
+                    <div className='approve-registration-form'>
                     Approve Registration form
                 </div>
-                <div className='post-upload'>
+                }
+                {
+                    page == 'change-password' &&
+                    <div className='change-password'>
                     Change password
                 </div>
+                }
+
             </div>
         </div>
     )
