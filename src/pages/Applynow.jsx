@@ -1,5 +1,8 @@
-import React from 'react'
+import React from 'react';
 import './Applynow.css';
+import ApplyNowForm from '../Forms/ApplyNowForm';
+import Parentdetails from '../Forms/ParentDetails';
+
 const Applynow = () => {
     return (
         <>
@@ -16,42 +19,17 @@ const Applynow = () => {
                 info:@Kalidevischool.edu.np<br />
                 Web: www.Kalidevischool.edu.np <br />
             </p>
-            <div className='applynow'>Apply Now</div>
+            <div className='admission-now'>Admission Now</div>
             <div className='page'>
                 <div className='form'>
-                    Date &nbsp;
-                    <input type='text' placeholder='dd/mm/yyyy' /><br /><br />
-                    Name of the Student <br />
-                    <input type='text' /><br /><br />
-                    Grade &nbsp;
-                    <input type='text' />
-                    <br /><br />
-                    Age &nbsp;
-                    <input type='text' /><br /><br />
-                    Registration No. &nbsp;
-                    <input type='password' /><br />
-                    <button className='submit-btn' type="submit">Submit</button>
-                </div>
+                    <div>
+                        <ApplyNowForm />
+                    </div>
 
-                <div className='applynow'>Parents Details</div>
-                <div className='form'>
-                    Date &nbsp;
-                    <input type='text' placeholder='dd/mm/yyyy' /><br /><br />
-                    Name of the Student <br />
-                    {/* <input type='text' /><br /><br /> */}
-                    <select>
-                        <option>Nursery</option>
-                        <option>L.K.G</option>
-                        <option>U.K.G</option>
-                    </select>
-                    Grade &nbsp;
-                    <input type='text' />
-                    <br /><br />
-                    Age &nbsp;
-                    <input type='text' /><br /><br />
-                    Registration No. &nbsp;
-                    <input type='password' /><br />
-                    <button className='submit-btn' type="submit">Submit</button>
+                    <div>
+                        <Parentdetails />
+                    </div>
+                    <br />
                 </div>
             </div>
         </>
