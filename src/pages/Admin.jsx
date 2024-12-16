@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './Admin.css';
 import Dashboard from './Admin-panel/Dashboard';
+import PostForm from './Admin-panel/PostForm';
+import NoticesUpload from './Admin-panel/NoticesUpload';
+import ChangePassword from './Admin-panel/ChangePassword';
+import ApproveRegistration from './Admin-panel/ApproveRegistration';
 
 const Admin = () => {
 
@@ -32,25 +36,25 @@ const Admin = () => {
                 }
                 {page == 'post-upload' &&
                     <div className='post-upload'>
-                    Post upload
+                        <PostForm />
                 </div>
                 }
                 {
                     page == 'notices-upload' &&
                     <div className='notices-upload'>
-                    Notices upload
+                            <NoticesUpload />
                 </div>
                 }
                 {
                     page == 'approve-registration-forms' &&
                     <div className='approve-registration-form'>
-                    Approve Registration form
+                            <ApproveRegistration />
                 </div>
                 }
                 {
                     page == 'change-password' &&
                     <div className='change-password'>
-                    Change password
+                            <ChangePassword />
                 </div>
                 }
 
