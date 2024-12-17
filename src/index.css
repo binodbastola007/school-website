@@ -1,145 +1,253 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
+/* General Reset */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-.main-container {
-  height: 80vh;
-  overflow-y: scroll;
-  
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 .homepage-container {
-  width: 100vw;
+  max-width: 1200px;
+    margin: 0 auto;
 }
+/* Carousel */
 .carousal-img {
   width: 100%;
   height: 400px;
   object-fit: cover;
 }
 
-.post-img {
-  width: 65vw;
-  height: 250px;
-  object-fit: cover;
+/* Analytics */
+.school-analytics {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 2rem;
 }
-.title-post {
-  display: block;
+.analytics-card {
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 1rem 0rem;
+  text-transform: uppercase;
 }
 
+/* Posts */
 .posts-container {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
-    padding: 1rem 2rem;
+  padding: 2rem;
 }
 
 .posts {
-  width: 50%;
+  width: 65%;
   }
-  
-  .message-div-principal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Side Information */
 .posts-sidediv {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+    padding: 2rem;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.posts-sidediv h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.posts-sidediv p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.principal-message {
   margin-top: 4rem;
-    width: 30%;
-    background-color: rgb(222, 154, 70);
-    padding: 1rem;
+}
+
+.principal-message,
+.vice-principal-message {
+  background-color: #ffffff;
+  border-left: 5px solid #007bff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .why-us-text {
-    margin-top: 1rem;
-    font-size: 2rem;
-      display: block;
+  .principal-message:hover,
+  .vice-principal-message:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-.school-analytics {
-  background-color: lightblue;
-  height: 200px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 110px;
+/* Styling for the messages */
+.principal-message h2,
+.vice-principal-message h2 {
+  color: #007bff;
+  font-weight: 600;
+}
+.principal-message p,
+.vice-principal-message p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.info {
-  display: block;
+.message-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  }
+  
+  .message-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+  }
+  
+  .message-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .message-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .post {
+    margin-bottom: 1.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .post:hover {
+    transform: scale(1.02);
+  }
+  
+  .post-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .post-text {
+    padding: 1rem;
+}
+
+.section-title {
   font-size: 2rem;
-  font-weight: bold;
+  margin-bottom: 1rem;
+    color: #0077b6;
 }
-.quick-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 1rem 2rem;
-  background-color: lightblue;
+/* Sidebar */
+.posts-sidediv {
+  width: 30%;
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border-radius: 10px;
 }
 
-.title-vision-mission {
+/* Vision and Mission */
+.vision-mission-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 2rem;
+    background-color: #e7f5ff;
+}
+
+.vision,
+.mission {
   text-align: center;
+  max-width: 400px;
 }
+
 .animated-image {
-  width: 300px;
+  width: 100%;
   height: 200px;
-  padding: 1.5rem;
+  border-radius: 15px;
   object-fit: cover;
-  border-radius: 2rem;
-  animation: zoomFade;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  margin-bottom: 1rem;
+  }
+  
+  /* Testimonial Section */
+  .testimonial-section {
+    padding: 3rem 2rem;
+    background-color: #e7f5ff;
+    text-align: center;
+  }
+  
+  .testimonial-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #0077b6;
+    font-weight: bold;
+  }
+  
+  .testimonial-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
 
+.testimonial-card:hover {
+  transform: translateY(-5px);
 }
 
-@keyframes zoomFade {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  50% {
-    transform: scale(1.2);
-    opacity: 0.8;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+.testimonial-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
-.vision-mission-div {
+
+.testimonial-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.testimonial-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+}
+.swiper-container {
+  padding-bottom: 2rem;
+}
+.swiper-slide {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  padding: 1rem 2rem 4rem 2rem;
 }
 
-.vision-div {
-  display: flex;
-  /* width: 50%; */
-}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 2rem 1rem;
+  }
 
-.mission-div {
-  display: flex;
-  /* width: 50%; */
+    .testimonial-card {
+      padding: 1.5rem;
+    }
 }

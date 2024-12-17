@@ -1,8 +1,7 @@
-import React from 'react'
-import NavItem from './Dropdown'
-import './Components.css'
-import ProfileIcon from './ProfileIcon'
-
+import React from 'react';
+import NavItem from './Dropdown';
+import './Components.css';
+import ProfileIcon from './ProfileIcon';
 
 const menuItems = [
     { title: 'Home', value: [] },
@@ -34,35 +33,35 @@ const menuItems = [
                 key: '3',
                 disabled: false,
             },
-        ]
+        ],
     },
     { title: 'Apply now', value: [] },
-
-]
+];
 
 const Navbar = () => {
-
-
     return (
-        <div className='nav-container'>
-            <div className='items-container'>
-                <div className='logo-div'>
-                    <img src='/schoollogo.png' className='logo-img' />
-                </div>
-                {menuItems?.map((items) => {
-                    return (<>
-                        <div className='nav-items'>
-                            <NavItem title={items.title} items={items.value} />
-                        </div>
-                    </>)
-                })}
+        <div className="nav-container">
+            {/* Logo Section */}
+            <div className="logo-div">
+                <img src="/schoollogo.png" className="logo-img" alt="Logo" />
+                <h1 className="logo-title">Your School</h1>
             </div>
 
-            <div className='profile-icon'>
+            {/* Menu Items */}
+            <div className="items-container">
+                {menuItems.map((item, index) => (
+                    <div key={index} className="nav-items">
+                        <NavItem title={item.title} items={item.value} />
+                    </div>
+                ))}
+            </div>
+
+            {/* Profile Icon */}
+            <div className="profile-icon">
                 <ProfileIcon />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

@@ -1,233 +1,161 @@
-import React, { useEffect } from 'react';
-import ReadmoreButton from '../Components/ReadmoreButton';
-import CarouselHome from '../Components/CarousalHome';
-import CountUp from 'react-countup';
-import { FaPhoneSquareAlt } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { IoLocationSharp } from "react-icons/io5";
+import React, { useEffect, useState } from "react";
+import ReadmoreButton from "../Components/ReadmoreButton";
+import CarouselHome from "../Components/CarousalHome";
+import CountUp from "react-countup";
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
 
 const Homepage = () => {
-
+    const [teachers, setTeachers] = useState([]);
 
     useEffect(() => {
+        // async function getData() {
+        //     try {
+        //         const response = await fetch("http://localhost:5000/api/teachers");
+        //         const json = await response.json();
+        //         setTeachers(json);
+        //     } catch (error) {
+        //         console.error(error.message);
+        //     }
+        // }
+        // getData();
+        setTeachers([{ image: '/profile.png', name: 'Kishor parajuli' },
+            { image: '/profile.png', name: 'Shiva bastakoti' },
+            { image: '/profile.png', name: 'Rajan chaudhary' },
+            { image: '/profile.png', name: 'Sandesh dhungana' },
+            { image: '/profile.png', name: 'Barsha rijal' },
+            { image: '/profile.png', name: 'Kalyan shivakoti' },
+            { image: '/profile.png', name: 'Bhuwan sanjyal' },
 
-        async function getData() {
-
-            try {
-                const response = await fetch("http://localhost:5000/api/all-posts");
-                const json = await response.json();
-                console.log(json);
-            }
-            catch (error) {
-                console.error(error.message);
-            }
-        }
-        getData();
-
-    }, [])
-
+        ])
+    }, []);
 
     return (
-        <div className='homepage-container'>
-            <div>
+        <div className="homepage-container">
+            {/* Hero Section */}
+            <section>
                 <CarouselHome />
-            </div>
+            </section>
 
-            <div className='school-analytics'>
-                <span className='info'>
-                    <CountUp start={0} end={23} duration={3} />+ proffesional teachers
-                </span>
-                <span className='info'>
-                    Updated Courses
-                </span>
-                <span className='info'>
-                    <CountUp start={0} end={500} duration={3} />+ registered student
-                </span>
-            </div>
+            {/* School Analytics */}
+            <section className="school-analytics">
+                <div className="analytics-card">
+                    <CountUp start={0} end={23} duration={3} />
+                    <span> Professional Teachers</span>
+                </div>
+                <div className="analytics-card">Updated Courses</div>
+                <div className="analytics-card">
+                    <CountUp start={0} end={500} duration={3} />
+                    <span> Registered Students</span>
+                </div>
+            </section>
 
-            <div className='posts-container'>
-                <div className='posts'>
-                    <span className='title-post'>
-                    Latest Posts
-                    </span>
-                    <div >
-                    <div>
-                        <img src='/post1.jpg' alt='preview' className='post-img' />
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+            {/* Latest Posts */}
+            <section className="posts-container">
+                <div className="posts">
+                    <h2 className="section-title">Latest Posts</h2>
+                    {[1, 2, 3, 4].map((post) => (
+                        <div key={post} className="post">
+                            <img src={`/post${post}.jpg`} alt={`Post ${post}`} className="post-img" />
+                            <p className="post-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
                             </p>
-                        <ReadmoreButton />
-                    </div>
-                    <div>
-                        <img src='/post2.jpg' alt='preview' className='post-img' />
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        <ReadmoreButton />
-                    </div>
-                    <div>
-                        <img src='/post3.jpg' alt='preview' className='post-img' />
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        <ReadmoreButton />
-                    </div>
-                    <div>
-                        <img src='/post4.jpg' alt='preview' className='post-img' />
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        <ReadmoreButton />
-                    </div>
-                </div>
-                </div>
-                <div className='posts-sidediv'>
-                    <div>
-                        <span className='why-us-text'>Why us?</span>
-                        <p>     Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum</p>
-                    </div>
-                    <div className='intro-div'>
-                        <h1 className='homepage-intro'>
-                            Introduction
-                        </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-                    <div>
-                        <div className='message-div-principal'>
-                            <span>Message from principal</span>
-                            <img src='/profile.png' alt='preview' />
-                            <p>           Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Sed do eiusmod tempor incididunt ut labore et
-                                dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip
-                                ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore
-                                eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum.</p>
+                            <ReadmoreButton />
                         </div>
-                        <div className='message-div-principal'>
-                            <span>Message from vice principal</span>
-                            <img src='/profile.png' alt='preview' />
-                            <p>           Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Sed do eiusmod tempor incididunt ut labore et
-                                dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip
-                                ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore
-                                eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum.</p>
+                    ))}
+                </div>
+
+                {/* Side Information */}
+                <aside className="posts-sidediv">
+                    <div className="why-us">
+                        <h2>Why Us?</h2>
+                        <p>
+                            We provide world-class education with professional teachers, advanced courses, and excellent facilities for all-round development.
+                        </p>
+                    </div>
+                    <div className="intro-div">
+                        <h2>Introduction</h2>
+                        <p>
+                            Welcome to Shangrila International School. Our mission is to nurture future leaders with knowledge, integrity, and creativity.
+                        </p>
+                    </div>
+
+                    {/* Principal's Message */}
+                    <div className="principal-message">
+                        <div className="message-header">
+                            <img src="/profile.png" alt="Principal" className="message-image" />
+                            <h2>Message from the Principal</h2>
                         </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div className='vision-mission-div'>
-                <div >
-                    <h1 className='title-vision-mission'>Our vision</h1>
-                    <div className='vision-div' s>
-                    <img src='/vision.jpg' className='animated-image' />
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit
-                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.s
+                            As the Principal of Shangrila International School, it is my privilege to lead an institution committed to excellence in education. We foster an environment where every student is valued, challenged, and inspired to reach their fullest potential.
                         </p>
                     </div>
 
-
-                </div>
-                <div>
-                    <h1 className='title-vision-mission'>Our mission</h1>
-                    <div className='mission-div'>
-                    <img src='/mission.jpg' className='animated-image' />
+                    {/* Vice Principal's Message */}
+                    <div className="vice-principal-message">
+                        <div className="message-header">
+                            <img src="/profile.png" className="message-image" />
+                            <h2>Message from the Vice Principal</h2>
+                        </div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit
-                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.s
+                            At Shangrila, we believe in holistic development. As Vice Principal, I am dedicated to nurturing an environment where students not only excel academically but also grow as responsible individuals prepared for a dynamic world.
                         </p>
                     </div>
+                </aside>
+            </section>
 
+            {/* Vision and Mission
+            <section className="vision-mission-section">
+                <div className="vision">
+                    <h2>Our Vision</h2>
+                    <img src="/vision.jpg" alt="Vision" className="animated-image" />
+                    <p>
+                        Our vision is to create a learning environment where students excel academically and develop essential life skills.
+                    </p>
                 </div>
-            </div>
+                <div className="mission">
+                    <h2>Our Mission</h2>
+                    <img src="/mission.jpg" alt="Mission" className="animated-image" />
+                    <p>
+                        Our mission is to provide quality education and inspire students to become responsible citizens and leaders.
+                    </p>
+                </div>
+            </section> */}
 
-            <div className='quick-links'>
-                <div className='footer-logo'>
-                    logo
-                </div>
-                <div className='footer-contactus'>
-                    <div>Contact us</div>
-                    <ul>
-                        <li><MdEmail /> shangrilainternation@gmail.com</li>
-                        <li><FaPhoneSquareAlt />+977-9812345678 / 01-657847</li>
-                        <li> <IoLocationSharp />Chapagaun,Lalitpur</li>
-                    </ul>
-                </div>
-                <div className='footer-quicklinks'>
-                    <div>Quick links</div>
-                    <ul>
-                        <li>Facebook page link</li>
-                        <li>Instagram page link</li>
-                        <li>Tweeter page link</li>
-                    </ul>
-                </div>
-            </div>
 
+            {/* Teacher Testimonials */}
+            <section className="testimonial-section">
+                <h2 className="section-title">What Our Teachers Say</h2>
+                <Swiper
+                    spaceBetween={30}
+                    slidesPerView={3}
+                    loop={true}
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    }}
+                    effect="fade"
+
+                >
+                    {teachers.map((teacher, index) => (
+                        <SwiperSlide key={index} className="testimonial-card">
+                            <div className="testimonial-content">
+                                <img
+                                    src={teacher.image || "/default-avatar.jpg"}
+                                    alt={teacher.name}
+                                    className="testimonial-image"
+                                />
+                                <h3>{teacher.name}</h3>
+                                <p className="testimonial-text">{teacher.testimonial}</p>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </section>
         </div>
-    )
-}
+    );
+};
 
-export default Homepage
+export default Homepage;
