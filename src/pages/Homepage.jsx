@@ -14,7 +14,7 @@ const Homepage = () => {
         async function getData() {
 
             try {
-                const response = await fetch("http://localhost:5000/");
+                const response = await fetch("http://localhost:5000/api/all-posts");
                 const json = await response.json();
                 console.log(json);
             }

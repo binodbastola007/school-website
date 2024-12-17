@@ -6,15 +6,16 @@
 
 .sidebar {
     width: 18%;
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: orange;
     
 }
 
 .main-page {
     width: 82%;
-    min-height: 100vh;
+    height: 80vh;
     background-color: violet;
+    overflow-y: scroll;
 }
 
 .sidebar-items {

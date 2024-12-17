@@ -5,7 +5,10 @@ import { Button } from 'antd';
 const Contactus = () => {
     return (
         <div className="contact-form">
-            <p className="md-text-left">Message Us</p>
+            <p style={{
+                color: '#4f46e5', fontSize: '1.875rem',
+                fontWeight: '700', display: 'flex', justifyContent: 'center'
+            }}>Message Us</p>
             <hr />
             <form>
                 <div className="input-group">
@@ -62,7 +65,7 @@ const Contactus = () => {
                         <label htmlFor="floating_phone">Phone number</label>
                     </div>
                 </div>
-                <Button type="submit">Submit</Button>
+                <Button type="submit" style={{ display: "flex", alignItems: 'center' }}>Submit</Button>
             </form>
         </div>
     )
