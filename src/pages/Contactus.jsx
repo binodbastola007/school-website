@@ -1,74 +1,74 @@
-import React from 'react'
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 import './Contactus.css';
-import { Button } from 'antd';
 
-const Contactus = () => {
+const ContactForm = () => {
+    const initialValues = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: '',
+    };
+
+    const validationSchema = Yup.object({
+        firstName: Yup.string().required('First name is required'),
+        lastName: Yup.string().required('Last name is required'),
+        email: Yup.string().email('Invalid email address').required('Email is required'),
+        phone: Yup.string().required('Phone number is required'),
+        message: Yup.string().required('Message is required'),
+    });
+
+    const handleSubmit = (values, { setSubmitting, resetForm }) => {
+        setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+            resetForm();
+        }, 400);
+    };
+
     return (
-        <div className="contact-form">
-            <p style={{
-                color: '#4f46e5', fontSize: '1.875rem',
-                fontWeight: '700', display: 'flex', justifyContent: 'center'
-            }}>Message Us</p>
-            <hr />
-            <form>
-                <div className="input-group">
-                    <input
-                        type="email"
-                        name="floating_email"
-                        id="floating_email"
-                        placeholder=" "
-                        required
-                    />
-                    <label htmlFor="floating_email">Email address</label>
-                </div>
-                <div className="input-group">
-                    <input
-                        type="text"
-                        name="message"
-                        id="message"
-                        placeholder=" "
-                        required
-                    />
-                    <label htmlFor="message">Write your Message</label>
-                </div>
-                <div className="grid md-grid-cols-2">
-                    <div className="input-group">
-                        <input
-                            type="text"
-                            name="floating_first_name"
-                            id="floating_first_name"
-                            placeholder=" "
-                            required
-                        />
-                        <label htmlFor="floating_first_name">First name</label>
-                    </div>
-                    <div className="input-group">
-                        <input
-                            type="text"
-                            name="floating_last_name"
-                            id="floating_last_name"
-                            placeholder=" "
-                            required
-                        />
-                        <label htmlFor="floating_last_name">Last name</label>
-                    </div>
-                </div>
-                <div className="grid md-grid-cols-2">
-                    <div className="input-group">
-                        <input
-                            type="tel"
-                            name="floating_phone"
-                            id="floating_phone"
-                            placeholder=" "
-                            required
-                        />
-                        <label htmlFor="floating_phone">Phone number</label>
-                    </div>
-                </div>
-                <Button type="submit" style={{ display: "flex", alignItems: 'center' }}>Submit</Button>
-            </form>
+        <div className='contact-form-main'>
+            <div className="contact-form-container">
+                <h2 className='contact-us-title'>Contact Us</h2>
+                <Formik
+                    initialValues={initialValues}
+                    validationSchema={validationSchema}
+                    onSubmit={handleSubmit}
+                >
+                    {({ isSubmitting }) => (
+                        <Form className="contact-form">
+                            <div className="form-group">
+                                <Field type="text" name="firstName" placeholder="First Name" />
+                                <ErrorMessage name="firstName" component="div" className="error" />
+                            </div>
+                            <div className="form-group">
+                                <Field type="text" name="lastName" placeholder="Last Name" />
+                                <ErrorMessage name="lastName" component="div" className="error" />
+                            </div>
+                            <div className="form-group">
+                                <Field type="email" name="email" placeholder="Email Address" />
+                                <ErrorMessage name="email" component="div" className="error" />
+                            </div>
+                            <div className="form-group">
+                                <Field type="tel" name="phone" placeholder="Phone Number" />
+                                <ErrorMessage name="phone" component="div" className="error" />
+                            </div>
+                            <div className="form-group">
+                                <Field as="textarea" name="message" placeholder="Your Message" />
+                                <ErrorMessage name="message" component="div" className="error" />
+                            </div>
+                            <button type="submit" disabled={isSubmitting}>
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
+                            </button>
+                        </Form>
+                    )}
+                </Formik>
+            </div>
         </div>
-    )
-}
 
-export default Contactus
+    );
+};
+
+export default ContactForm;

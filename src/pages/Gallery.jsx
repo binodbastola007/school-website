@@ -3,48 +3,77 @@ import "./Gallery.css";
 
 const galleryData = {
     Events: [
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
+
     ],
     "Annual Program": [
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
     ],
     Festival: [
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
     ],
     "Sports Week": [
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
-        "/assets/Events/School.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
+        "/post2.jpg",
+        "/post1.jpg",
+        "/post3.jpg",
+        "/post4.jpg",
     ],
 };
 
@@ -52,15 +81,15 @@ const Gallery = () => {
     const [selectedCategory, setSelectedCategory] = useState("Events");
 
     return (
-        <div className="gallery-container">
+        <div className="main-gallery-container">
+            <div className="gallery-container">
             <h1 className="gallery-title">Photo Gallery</h1>
             {/* Buttons for Categories */}
             <div className="gallery-buttons">
-                {Object.keys(galleryData).map((category, index) => (
+                    {Object.keys(galleryData).map((category) => (
                     <button
                         key={category}
-                        className={`gallery-button ${selectedCategory === category ? "active" : ""
-                            }`}
+                            className={`gallery-button ${selectedCategory === category ? "active" : ""}`}
                         onClick={() => setSelectedCategory(category)}
                     >
                         {category}
@@ -71,15 +100,14 @@ const Gallery = () => {
             <div className="gallery-grid">
                 {galleryData[selectedCategory].map((image, index) => (
                     <div key={index} className="gallery-item">
-                        <img src='' alt={`${image}.${index}`} className="gallery-image" />
+                        <img src={image} alt={`Gallery ${index}`} className="gallery-image" />
                     </div>
                 ))}
             </div>
         </div>
+        </div>
+
     );
 };
 
 export default Gallery;
-
-
-

@@ -1,9 +1,49 @@
-import React from 'react'
+import React from 'react';
+import './Notices.css';
+
+const notices = [
+    {
+        id: 1,
+        title: "Annual Sports Day",
+        date: "2024-12-22",
+        description: "Join us for the Annual Sports Day on December 22nd. All students are encouraged to participate!",
+    },
+    {
+        id: 2,
+        title: "Winter Vacation Notice",
+        date: "2024-12-25",
+        description: "School will remain closed for winter vacation from December 25th to January 5th.",
+    },
+    {
+        id: 3,
+        title: "New Year Celebration",
+        date: "2025-01-01",
+        description: "Celebrate the New Year with us! Join us for a cultural program on January 1st at the auditorium.",
+    },
+];
 
 const Notices = () => {
     return (
-        <div>Notices</div>
-    )
-}
+        <div className='main-notice-container'>
+            <div className="page-container">
+                {/* Header */}
+                <header className="header">
+                    <h1>School Notices</h1>
+                </header>
 
-export default Notices
+                {/* Notices Section */}
+                <main className="notices-container">
+                    {notices.map((notice) => (
+                        <div key={notice.id} className="notice-item">
+                            <h2>{notice.title}</h2>
+                            <p className="notice-date">Date: {notice.date}</p>
+                            <p>{notice.description}</p>
+                        </div>
+                    ))}
+                </main>
+            </div>
+        </div>
+    );
+};
+
+export default Notices;

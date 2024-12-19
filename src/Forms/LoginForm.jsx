@@ -6,14 +6,12 @@ import './Form.css';
 const LoginSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email').required('Email is required'),
     password: Yup.string().required('Required'),
-
 });
 
 const LoginForm = () => (
-    <div className='main-form-container'>
-
-        <div className='form-container'>
-            <h1>SignIn</h1>
+    <div className='school-signin-container'>
+        <div className='school-form-container'>
+            <h1 className='form-heading'>Teacher login</h1>
             <Formik
                 initialValues={{
                     email: '',
@@ -25,27 +23,21 @@ const LoginForm = () => (
                 }}
             >
                 {({ errors, touched }) => (
-                    <Form className='form-div'>
-
-                        <div className='fields-container'>
-                            <Field name="email" type="email" placeholder="Email" className='registration-form-fields' />
-                            {errors.email && touched.email ? <div className='error-div'>{errors.email}</div> : null}
+                    <Form className='form-content'>
+                        <div className='form-field-container'>
+                            <Field name="email" type="email" placeholder="Email Address" className='input-field' />
+                            {errors.email && touched.email ? <div className='error-message'>{errors.email}</div> : null}
                         </div>
-
-
-                        <div className='fields-container'>
-                            <Field name="password" type='password' placeholder="Password" className='registration-form-fields' />
-                            {errors.password && touched.password ? <div className='error-div'>{errors.password}</div> : null}
+                        <div className='form-field-container'>
+                            <Field name="password" type='password' placeholder="Password" className='input-field' />
+                            {errors.password && touched.password ? <div className='error-message'>{errors.password}</div> : null}
                         </div>
-
-                        <button className='submit-btn' type="submit">Submit</button>
-
+                        <button className='submit-button' type="submit">Login</button>
                     </Form>
                 )}
             </Formik>
         </div>
     </div>
-
 );
 
 export default LoginForm;
