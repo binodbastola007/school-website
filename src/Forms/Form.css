@@ -27,6 +27,7 @@
 
 .field-container {
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .form-field {
@@ -37,6 +38,7 @@
     border-radius: 4px;
     outline: none;
     transition: border-color 0.2s;
+
 }
 
 .form-field:focus {
@@ -71,7 +73,10 @@
 .error {
     color: red;
     font-size: 0.875rem;
-    margin-top: 0.25rem;
+    margin-top: -0.15rem;
+        position: absolute;
+        top: 100%;
+        left: 0
 }
 
 /*school sign in form */
@@ -123,12 +128,6 @@
 
 .input-field:focus {
     border-color: #3498db;
-}
-
-.error-message {
-    color: #e74c3c;
-    font-size: 0.875rem;
-    margin-top: 5px;
 }
 
 .submit-button {
