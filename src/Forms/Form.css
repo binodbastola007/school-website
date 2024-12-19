@@ -114,6 +114,7 @@
 
 .form-field-container {
     margin-bottom: 20px;
+    position: relative;
 }
 
 .input-field {

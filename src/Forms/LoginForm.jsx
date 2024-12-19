@@ -11,7 +11,7 @@ const LoginSchema = Yup.object().shape({
 const LoginForm = () => (
     <div className='school-signin-container'>
         <div className='school-form-container'>
-            <h1 className='form-heading'>Teacher login</h1>
+            <h1 className='form-heading'>Admin login</h1>
             <Formik
                 initialValues={{
                     email: '',
@@ -26,11 +26,11 @@ const LoginForm = () => (
                     <Form className='form-content'>
                         <div className='form-field-container'>
                             <Field name="email" type="email" placeholder="Email Address" className='input-field' />
-                            {errors.email && touched.email ? <div className='error-message'>{errors.email}</div> : null}
+                            {errors.email && touched.email ? <div className='error'>{errors.email}</div> : null}
                         </div>
                         <div className='form-field-container'>
                             <Field name="password" type='password' placeholder="Password" className='input-field' />
-                            {errors.password && touched.password ? <div className='error-message'>{errors.password}</div> : null}
+                            {errors.password && touched.password ? <div className='error'>{errors.password}</div> : null}
                         </div>
                         <button className='submit-button' type="submit">Login</button>
                     </Form>
